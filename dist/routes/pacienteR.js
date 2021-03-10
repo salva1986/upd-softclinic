@@ -1,0 +1,24 @@
+"use strict";
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const autenticacion_1 = require("../middlewares/autenticacion");
+const pacienteC = __importStar(require("../controllers/pacienteC"));
+const pacienteRoutes = express_1.Router();
+pacienteRoutes.get('/', [autenticacion_1.verificaToken], pacienteC.obtenerPaciente);
+pacienteRoutes.get('/getById/:id', [autenticacion_1.verificaToken], pacienteC.verPacienteById);
+pacienteRoutes.get('/select', [autenticacion_1.verificaToken], pacienteC.selectAll);
+pacienteRoutes.get('/get/:estado/:sort/:order/:page/:texto', [autenticacion_1.verificaToken], pacienteC.verTodos);
+pacienteRoutes.get('/get/:estado', [autenticacion_1.verificaToken], pacienteC.verTodosExcel);
+pacienteRoutes.put('/update/:id', [autenticacion_1.verificaToken], pacienteC.actualizarPaciente);
+pacienteRoutes.put('/delete/:id', [autenticacion_1.verificaToken], pacienteC.eliminarPaciente);
+pacienteRoutes.put('/deleteselected/:filtro', [autenticacion_1.verificaToken], pacienteC.eliminarPacientes);
+pacienteRoutes.get('/consultarnit/:nit', [autenticacion_1.verificaToken], pacienteC.consultarNit);
+pacienteRoutes.put('/actualizardatos/:idpaciente', [autenticacion_1.verificaToken], pacienteC.actualizardatos);
+exports.default = pacienteRoutes;

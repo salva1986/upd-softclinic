@@ -1,0 +1,25 @@
+{
+    "resultado": true,
+    "fecha": "2020-05-28T19:08:41-06:00",
+    "origen": "Validaciones XML Segun FEL Reglas y Validaciones Versión 1.5.3 | Diciembre 2019 | Acuerdo de Directorio SAT 13-2018",
+    "descripcion": "Validado y Certificado Exitosamente",
+    "control_emision": {
+        "Saldo": 998,
+        "Creditos": 1000
+    },
+    "alertas_infile": true,
+    "descripcion_alertas_infile": [
+        "Este documento fue procesado en nuestro SandBox en modalidad de pruebas, por ningun motivo debe ser usado como comprobante fiscal. El que incumpliere será sancionado por la SAT con multas según el acuerdo vigente.",
+        "Documento enviado previamente.",
+        "Documento consultado en modalidad de re-intento."
+    ],
+    "alertas_sat": false,
+    "descripcion_alertas_sat": [],
+    "cantidad_errores": 0,
+    "descripcion_errores": [],
+    "informacion_adicional": "transaccion: 119661102, sysid: 65bf5f6aac19fb2f5663fa2d068c5e87 Nodo: 16e8b06926da",
+    "uuid": "22C1BF0D-5501-4E76-A370-93595B21B9A7",
+    "serie": "**PRUEBAS**",
+    "numero": 1426148982,
+    "xml_certificado": "PGR0Z+PC94YWRlczpRdWFsaWZ5aW5nUHJvcGVydGllcz48L2RzOk9iamVjdD4KPC9kczpTaWduYXR1cmU+PC9kdGU6R1REb2N1bWVudG8+"
+}
